@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>
+            Lista de Tarefas - TO DO
+        </h1>
+    </header>
+
+    <!-- Nova tarefa -->
+    <div id="nova_task">
+        <div id="inputTarefa">
+            <input id="nova_tarefa" type="text" placeholder="Adicionar tarefa">
+            <button id="btn" onclick="novaTarefa()"><ion-icon name="create-outline"></ion-icon></button>
+        </div>
+    </div>
+
+    <!-- Container main -->
+    <div id="container">
+        <!-- A fazer -->
+        <div class="situacao">
+            <table id="a_fazer">
+                <tr>
+                    <th colspan="2">A fazer</th>
+                </tr>
+                <tr>
+                    <td>Iniciar finalização do Projeto TO DO</td>
+                    <td class="icones"><ion-icon onclick="excluirTarefa(this)" name="close-outline"></ion-icon><ion-icon onclick="moverFazendo(this)" name="chevron-forward-outline"></ion-icon></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Fazendo -->
+        <div class="situacao">
+            <table id="fazendo">
+                <tr>
+                    <th colspan="2">Fazendo</th>
+                </tr>
+                <tr>
+                    <td>Tratando funções de manipução de Node</td>
+                    <td class="icones"><ion-icon onclick="moveraFazer(this)" name="chevron-back-outline"></ion-icon><ion-icon onclick="excluirTarefa(this)" name="close-outline"></ion-icon><ion-icon onclick="moverFeito(this)" name="chevron-forward-outline"></ion-icon></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Feito -->
+        <div class="situacao">
+            <table id="feito">
+                <tr>
+                    <th colspan="2">Feito</th>
+                </tr>
+                <tr>
+                    <td>Criar Design TO DO</td>
+                    <td class="icones"><ion-icon onclick="moverFazendo(this)" name="chevron-back-outline"></ion-icon><ion-icon onclick="excluirTarefa(this)" name="close-outline"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        Desenvolvido por Daniel Gonçalves dos Santos @2023
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
