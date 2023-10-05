@@ -1,5 +1,5 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 body, html {
@@ -36,7 +36,7 @@ header h1 {
     backdrop-filter: blur(5px);
     border-radius: 3rem 0;
     color: white;
-    margin: auto;
+    margin: 20px auto;
     padding: 10px;
     justify-content: center;
     width: 40%;
@@ -97,7 +97,7 @@ header h1 {
     margin: 10px auto 0 auto;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 770px) {
     #container {
         display: flex;
         flex-direction: column;
@@ -148,19 +148,26 @@ table {
     margin: 0;
 }
 
-table {
-    table-layout: fixed;
-}
-
 table tr td:nth-child(even) {
     text-align: right;
-    max-width: 18px;
+    border-left: 1px solid rgb(110, 110, 110);
 }
 
-@media (max-width: 590px) {
+@media (max-width: 500px) {
     table tr td:nth-child(even) {
-        text-align: right;
-        max-width: 30px;
+        width: 20%;
+    }
+}
+
+@media (min-width: 770px) {
+    table tr td:nth-child(even) {
+        width: 30%;
+    }
+}
+
+@media (min-width: 900px) {
+    table tr td:nth-child(even) {
+        width: 25%;
     }
 }
 
@@ -177,10 +184,4 @@ footer {
     text-align: center;
     font-weight: 600;
     font-size: 1.4rem;
-}
-
-@media (max-width: 770px) {
-    footer {
-        font-size: .8rem;
-    }
 }
